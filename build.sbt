@@ -19,6 +19,6 @@ val JFRDir = "/tmp/profile-jfr"
 val flameGraphDir= s"$homeDir/git/FlameGraph"
 val jfrFlameGraphDir = s"$homeDir/bin/jfr-flame-graph/bin"
 
-addCommandAlias("profTCStringParserBench", s"jmh:run TCStringParserBench -f1 -wi 2 -i2 -prof jmh.extras.JFR:dir=$JFRDir;flameGraphDir=$flameGraphDir;;jfrFlameGraphDir=$jfrFlameGraphDir;flameGraphOpts=--minwidth,2;verbose=true")
+addCommandAlias("profTCStringParserBench", s"jmh:run TCStringParserBench -prof jmh.extras.JFR:dir=$JFRDir;flameGraphDir=$flameGraphDir;;jfrFlameGraphDir=$jfrFlameGraphDir;flameGraphOpts=--minwidth,2;verbose=true")
 
 enablePlugins(JmhPlugin)
